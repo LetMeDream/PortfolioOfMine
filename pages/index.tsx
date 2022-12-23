@@ -13,8 +13,7 @@ const Home: NextPage = () => {
       </Head>
 
       <main className=" bg-white">
-        <section 
-          className='min-h-screen bg-no-repeat bg-cover bg-fixed' id='home'
+        <section className='min-h-screen bg-no-repeat bg-cover bg-fixed sticky top-0 z-0' id='home'
           style={{
             backgroundImage:`url(${bg1.src})`
           }}
@@ -48,7 +47,7 @@ const Home: NextPage = () => {
 
         </section>
 
-        <section className="min-h-screen">
+        <section className=" flex bg-gray-900 py-28 relative z-10 min-h-screen flex-col md:flex-row">
 
         </section>
 
