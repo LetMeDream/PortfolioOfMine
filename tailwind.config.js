@@ -6,7 +6,13 @@ module.exports = {
     './app/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
-    extend: {},
+    fontFamily: {
+      'Roboto': ['Roboto', 'sans-serif'],
+      'Roboto-Mono': ['Roboto Mono', 'monospace']
+    },
+    extend: {
+      
+    },
   },
   plugins: [],
 }
