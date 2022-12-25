@@ -7,7 +7,7 @@ import { useEffect, useState } from "react"
 import Nav from "../components/Nav";
 import Work from "../components/Work";
 /* import About from "../components/About"; */
-import About; from "../components/About"
+import About from "../components/About"
 
 
 const Home: NextPage = () => {
