@@ -6,8 +6,7 @@ import {BsLinkedin,BsGithub} from 'react-icons/bs'
 import { useEffect, useState } from "react"
 import Nav from "../components/Nav";
 import Work from "../components/Work";
-/* import About from "../components/About"; */
-import About from "../components/About"
+import Me from "../components/Me";
 
 
 const Home: NextPage = () => {
@@ -61,7 +60,7 @@ const Home: NextPage = () => {
 
         </section>
 
-        <About/>
+        <Me/>
 
         <Work/>
 
