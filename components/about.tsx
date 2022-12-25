@@ -1,6 +1,7 @@
 import {useEffect} from 'react'
+import type { NextPage } from 'next'
 
-const About = () => {
+const About: NextPage = () => {
 
   useEffect(()=>{
     /*========= ONLOAD EVENT =========*/
