@@ -8,8 +8,10 @@ module.exports = {
   theme: {
     fontFamily: {
       'Roboto': ['Roboto', 'sans-serif'],
-      'Roboto-Mono': ['Roboto Mono', 'monospace']
+      'Roboto-Mono': ['Roboto Mono', 'monospace'],
+      'Roboto-Condensed': ['Roboto Condensed', 'sans-serif']
     },
+    
     extend: {
       
     },

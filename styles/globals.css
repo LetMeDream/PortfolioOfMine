@@ -5,24 +5,21 @@
 *{
     scroll-behavior: smooth;
 }
-/* manual declaration, as this is only accessed through js */
-@-webkit-keyframes typing {
-    0%,
-    to {
+/* Animation for the '#typewriter' element */
+  @-webkit-keyframes typing {
+    0%, to {
       width: 0%;
     }
-    40%,
-    70% {
+    40%, 70% {
       width: 100%;
     }
   }
   @keyframes typing {
-    0%,
-    to {
+    0%, to {
       width: 0%;
     }
-    40%,
-    70% {
+    40%, 70% {
       width: 100%;
     }
   }
+  /* -------------------------------------------------------*/
