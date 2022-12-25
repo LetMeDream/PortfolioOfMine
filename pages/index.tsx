@@ -4,9 +4,9 @@ import Head from 'next/head'
 import Image from 'next/image'
 import {BsLinkedin,BsGithub} from 'react-icons/bs'
 import { useEffect, useState } from "react"
-import About from "../components/About";
 import Nav from "../components/Nav";
 import Work from "../components/Work"
+import About from "../components/About";
 
 
 const Home: NextPage = () => {
