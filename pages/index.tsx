@@ -51,7 +51,7 @@ const Home: NextPage = () => {
             <BsGithub className='text-2xl text-white md:text-4xl cursor-pointer'/>
           </div>
           <a
-            href="/#work"
+            href="#work"
             className=" px-4 py-3 lg:px-5 lg:py-4 border-2 self-center font-Roboto text-white bg-[length:140%] bg-no-repeat bg-[url('../public/button-light.svg')] bg-[position:400%] hover:bg-[position:50%] hover:text-gray-900 transition-all duration-500 lg:text-lg mt-16"
           >
             Explore my universe
