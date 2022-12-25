@@ -1,7 +1,7 @@
 import {useEffect} from 'react'
-import React from 'react'
 
-const About: React.FC = () => {
+
+const About = () => {
 
   useEffect(()=>{
     /*========= ONLOAD EVENT =========*/
@@ -31,9 +31,11 @@ const About: React.FC = () => {
 
           typewriter.style.animation =
             "typing " + speed + "s steps(" + textLength + ", end)";
-          index === typewriterHeadlines.length - 1
-            ? (index = 0)
-            : index++; /* go back to index 0, if incrementing will causes OutOfBoundsException */
+          if(index === typewriterHeadlines.length - 1){
+            index = 0
+          }else{
+            index++; /* go back to index 0, if incrementing will causes OutOfBoundsException */
+          }
         }, 650); 
         return timeout     
     }
