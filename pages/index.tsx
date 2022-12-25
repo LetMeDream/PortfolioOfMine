@@ -38,7 +38,6 @@ const Home: NextPage = () => {
         <title>Portfolio of mine</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
       <main className="">
         <Nav/>
         <section className='min-h-screen w-full bg-no-repeat sticky top-0 z-0 flex flex-col justify-center bg-[url("../public/futureGrid.webp")] bg-[rgb(105,25,255)] bg-[length:105%_109%]' id='home'>          
