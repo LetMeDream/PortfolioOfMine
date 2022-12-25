@@ -10,7 +10,6 @@ import Work from "../components/Work"
 
 
 const Home: NextPage = () => {
-
   useEffect(()=>{
     /* Bg position movement on mouse mose */
     const hero = document.getElementById("home");
