@@ -31,7 +31,6 @@ const Home: NextPage = () => {
     }
 
   },[])
-
   return (
     <div className="">
       <Head>
