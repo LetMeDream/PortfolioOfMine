@@ -35,7 +35,7 @@ const ContactForm = () => {
                         </svg>
                     </div>
 
-                    <input type="text" id="form-name" autoComplete='nope' minLength={3} className={classNames("peer text-white bg-[rgb(31,39,47)] border-[1.5px] border-[rgb(45,53,62)]  rounded-md block w-full pl-10 pr-10 p-2.5 focus:outline-none focus:border-[1.5px] focus:border-[rgb(105,25,255)]", (errors.name && isSubmitted) ? 'border-red-500 ' : 'border-neutral-500 ')}
+                    <input type="text" id="form-name" autoComplete='nope' minLength={3} className={classNames("peer text-white bg-[rgb(31,39,47)] border-[1.5px]   rounded-md block w-full pl-10 pr-10 p-2.5 focus:outline-none focus:border-[1.5px] focus:border-[rgb(105,25,255)]", (errors.name && isSubmitted) ? 'border-red-500 ' : 'border-[rgb(45,53,62)] ')}
                         {...register('name',{ required:true, minLength: 3 })}
                     />
 
@@ -67,7 +67,7 @@ const ContactForm = () => {
                         </svg>
                     </div>
 
-                    <input type="email" id="form-name" autoComplete='nope' className={classNames("peer border-[rgb(45,53,62)]  text-white bg-[rgb(31,39,47)] border-[1.5px]  rounded-md block w-full pl-10 pr-10 p-2.5 focus:outline-none focus:border-[1.5px] focus:border-[rgb(105,25,255)]", (errors.email && isSubmitted) ? 'border-red-500 ' : 'border-neutral-500 ')}
+                    <input type="email" id="form-name" autoComplete='nope' className={classNames("peer  text-white bg-[rgb(31,39,47)] border-[1.5px]  rounded-md block w-full pl-10 pr-10 p-2.5 focus:outline-none focus:border-[1.5px] focus:border-[rgb(105,25,255)]", (errors.email && isSubmitted) ? 'border-red-500 ' : 'border-[rgb(45,53,62)] ')}
                         {...register('email',{ required:true, pattern: /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/})}
                     />
 
@@ -92,7 +92,7 @@ const ContactForm = () => {
                 <div className="relative mt-1 mb-12">
                     
 
-                    <textarea rows={4} id="form-name" autoComplete='nope' className={classNames("peer resize-none border-[rgb(45,53,62)]  text-white bg-[rgb(31,39,47)] border-[1.5px]  rounded-md block w-full pr-10 p-2.5 focus:outline-none focus:border-[1.5px] focus:border-[rgb(105,25,255)]", (errors.message && isSubmitted) ? 'border-red-500 ' : 'border-neutral-500 ')}
+                    <textarea rows={4} id="form-name" autoComplete='nope' className={classNames("peer resize-none text-white bg-[rgb(31,39,47)] border-[1.5px]  rounded-md block w-full pr-10 p-2.5 focus:outline-none focus:border-[1.5px] focus:border-[rgb(105,25,255)]", (errors.message && isSubmitted) ? 'border-red-500 ' : 'border-[rgb(45,53,62)]')}
                         {...register('message',{ required:true })}
                     />
 
