@@ -23,7 +23,7 @@ const ContactForm = () => {
                 console.log(result.text);
                 setIsSubmitted(false);
                 reset();
-                toast('Email sent succesfully 🦄', {
+                toast.success('Email sent succesfully 🦄', {
                     position: "top-right",
                     autoClose: 5000,
                     hideProgressBar: false,
@@ -35,6 +35,16 @@ const ContactForm = () => {
                     });
             }, (error) => {
                 console.log(error.text);
+                toast.error('Ups. There has been an error.', {
+                    position: "top-right",
+                    autoClose: 5000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "light",
+                    });
             });
     }
     const showErrors = () =>{
