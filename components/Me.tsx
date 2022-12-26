@@ -64,7 +64,7 @@ const Me = () => {
                 </h3>
               </div>
               <p className='text-white font-Roboto leading-7 md:leading-8'>
-                Hello there. My name is Raúl, a passionate freelancer bringing your frontend programming and designs to life. I am experienced in developing web apps ranging from landing pages to full applications.  
+                Hello there. My name is Raúl, a passionate freelancer bringing your frontend programming and designs to life. I am experienced in developing web apps ranging from landing pages to full-fledged applications.  
               </p>
             </div>
       </section>
