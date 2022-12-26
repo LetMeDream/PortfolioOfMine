@@ -11,7 +11,7 @@ const ContactForm = () => {
 
   return (
     <>
-        <form>
+        <form onSubmit={handleSubmit(onSubmit)}>
             <div className="relative mt-1 mb-12">
                 <div className="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
                     <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 opacity-60" viewBox="0 0 24 24" fill="currentColor">
@@ -20,7 +20,9 @@ const ContactForm = () => {
                     </svg>
                 </div>
 
-                <input type="text" id="form-name" name="name" className="bg-neutrals-700 border-[1.5px] border-neutrals-500 rounded-md block w-full pl-10 pr-10 p-2.5 focus:outline-none"/>
+                <input type="text" id="form-name" autoComplete='off' className="bg-neutrals-700 border-[1.5px] border-neutrals-500 rounded-md block w-full pl-10 pr-10 p-2.5 focus:outline-none"
+                    {...register('name',{ required:true })}
+                />
 
                 {/* <!-- validation displays --> */}
                 {/* <div className="flex absolute inset-y-0 right-0 items-center pr-3 pointer-events-none invisible peer-valid:visible">

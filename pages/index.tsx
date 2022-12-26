@@ -1,9 +1,8 @@
-import bg2 from "../public/futureGrid.webp"
+
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import Image from 'next/image'
 import {BsLinkedin,BsGithub} from 'react-icons/bs'
-import { useEffect, useState } from "react"
+import { useEffect } from "react"
 import Me from "../components/Me";
 import Nav from "../components/Nav";
 import Work from "../components/Work";
