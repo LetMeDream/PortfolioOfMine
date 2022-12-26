@@ -35,7 +35,6 @@ const Home: NextPage = () => {
     <div className="">
       <Head>
         <title>Portfolio of mine</title>
-        <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="">
         <Nav/>
