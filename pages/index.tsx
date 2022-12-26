@@ -6,8 +6,9 @@ import { useEffect } from "react"
 import Me from "../components/Me";
 import Nav from "../components/Nav";
 import Work from "../components/Work";
-import Contact from "../components/Contact"
-
+import Contact from "../components/Contact";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Home: NextPage = () => {
   useEffect(()=>{
@@ -67,7 +68,7 @@ const Home: NextPage = () => {
 
       </main>
 
-      
+      <ToastContainer />
     </div>
   )
 }

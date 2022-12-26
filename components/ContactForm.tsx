@@ -1,6 +1,8 @@
-import {useState} from 'react';
+import {useState,useRef} from 'react';
 import {IoMdPaperPlane} from 'react-icons/io';
 import { useForm } from 'react-hook-form';
+import emailjs from '@emailjs/browser';
+import {toast} from 'react-toastify'
 
 
 const ContactForm = () => {
@@ -10,11 +12,30 @@ const ContactForm = () => {
     }
     /* In onrder to show errors only after the user has tried to submit the form */
     const [isSubmitted,setIsSubmitted] = useState(false)
+    const { register, handleSubmit, reset, formState: {errors} } = useForm();
 
-    const { register, handleSubmit, formState: {errors} } = useForm();
+    const contactForm = useRef<HTMLFormElement>(null);
     const onSubmit = (data: any) => {
         setIsSubmitted(false);
         console.log(data);
+        emailjs.sendForm('service_4yft98p', 'template_6573t0f', contactForm.current as HTMLFormElement, 'a6q77YoWG7RotjrE1')
+            .then((result) => {
+                console.log(result.text);
+                setIsSubmitted(false);
+                reset();
+                toast('Email sent succesfully 🦄', {
+                    position: "top-right",
+                    autoClose: 5000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "dark",
+                    });
+            }, (error) => {
+                console.log(error.text);
+            });
     }
     const showErrors = () =>{
         setIsSubmitted(true);
@@ -22,7 +43,7 @@ const ContactForm = () => {
     }
   return (
     <>
-        <form onSubmit={handleSubmit(onSubmit)} autoComplete='off'>
+        <form ref={contactForm} onSubmit={handleSubmit(onSubmit)} autoComplete='off'>
             {/* name */}
             <div className="input-slot ">
                 <label className='mb-2 block font-Roboto text-sm uppercase text-white'>Name</label>
@@ -45,7 +66,7 @@ const ContactForm = () => {
                             <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
                         </svg>
                     </div>
-                    <div className={classNames("flex absolute inset-y-0 right-0 items-center pr-3 pointer-events-none text-red-500", (isSubmitted && errors.name) ? 'visible' : 'invisible')}>
+                    <div className={classNames("flex absolute inset-y-0 right-0 items-center pr-3 pointer-events-none text-red-500",    (isSubmitted && errors.name) ? 'visible' : 'invisible')}>
                         <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 text-alert-red" viewBox="0 0 20 20" fill="currentColor">
                             <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clipRule="evenodd"></path>
                         </svg>
@@ -67,7 +88,7 @@ const ContactForm = () => {
                         </svg>
                     </div>
 
-                    <input type="email" id="form-name" autoComplete='nope' className={classNames("peer  text-white bg-[rgb(31,39,47)] border-[1.5px]  rounded-md block w-full pl-10 pr-10 p-2.5 focus:outline-none focus:border-[1.5px] focus:border-[rgb(105,25,255)]", (errors.email && isSubmitted) ? 'border-red-500 ' : 'border-[rgb(45,53,62)] ')}
+                    <input  id="form-mail" autoComplete='nope' className={classNames("peer  text-white bg-[rgb(31,39,47)] border-[1.5px]  rounded-md block w-full pl-10 pr-10 p-2.5 focus:outline-none focus:border-[1.5px] focus:border-[rgb(105,25,255)]", (errors.email && isSubmitted) ? 'border-red-500 ' : 'border-[rgb(45,53,62)] ')}
                         {...register('email',{ required:true, pattern: /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/})}
                     />
 
@@ -90,10 +111,8 @@ const ContactForm = () => {
             <div className="input-slot ">
                 <label className='mb-2 block font-Roboto text-sm uppercase text-white'>Message</label>
                 <div className="relative mt-1 mb-12">
-                    
-
-                    <textarea rows={4} id="form-name" autoComplete='nope' className={classNames("peer resize-none text-white bg-[rgb(31,39,47)] border-[1.5px]  rounded-md block w-full pr-10 p-2.5 focus:outline-none focus:border-[1.5px] focus:border-[rgb(105,25,255)]", (errors.message && isSubmitted) ? 'border-red-500 ' : 'border-[rgb(45,53,62)]')}
-                        {...register('message',{ required:true })}
+                    <textarea rows={4} id="form-message" autoComplete='nope' className={classNames("peer resize-none text-white bg-[rgb(31,39,47)] border-[1.5px]  rounded-md block w-full pr-10 p-2.5 focus:outline-none focus:border-[1.5px] focus:border-[rgb(105,25,255)]", (errors.message && isSubmitted) ? 'border-red-500 ' : 'border-[rgb(45,53,62)]')}
+                        {...register('message',{ required:true, minLength:10 })}
                     />
 
                     {/* <!-- validation displays --> */}
@@ -106,8 +125,7 @@ const ContactForm = () => {
                         <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 text-alert-red" viewBox="0 0 20 20" fill="currentColor">
                             <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clipRule="evenodd"></path>
                         </svg>
-                    </div>  
-                    
+                    </div>                 
                     {/* <span className="absolute text-xs text-red-900 mt-[0.4rem] invisible peer-invalid:visible">Name is empty.</span> */}
                 </div>
             </div>
