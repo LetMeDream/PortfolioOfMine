@@ -4,9 +4,10 @@ import Head from 'next/head'
 import Image from 'next/image'
 import {BsLinkedin,BsGithub} from 'react-icons/bs'
 import { useEffect, useState } from "react"
+import Me from "../components/Me";
 import Nav from "../components/Nav";
 import Work from "../components/Work";
-import Me from "../components/Me";
+import Contact from "../components/Contact"
 
 
 const Home: NextPage = () => {
@@ -63,6 +64,8 @@ const Home: NextPage = () => {
         <Me/>
 
         <Work/>
+
+        <Contact/>
 
       </main>
 

@@ -48,9 +48,10 @@ const Nav = () => {
   
     },[navBackgrounded])
 
+    /* Here we make de nav grow depending on the isActive value */
     useEffect(()=>{ 
         if(!nav.current) return
-        console.log(nav.current.style.height)
+        /* console.log(nav.current.style.height) */
         if(isActive){
             nav.current.style.height = 48 + 'px'
         }else{
@@ -63,7 +64,7 @@ const Nav = () => {
   return (
     <>
         <nav 
-            className={classNames('py-2 md:py-3 px-16 md:px-28 flex flex-col md:flex-row fixed w-full top-0 z-20 transition-all duration-700 md:justify-between md:items-center',          navBackgrounded && 'bg-[rgb(0,0,0,.7)] backdrop-blur-sm')}>
+            className={classNames('py-2 md:py-3 px-16 md:px-28 flex flex-col md:flex-row fixed w-full top-0 z-20 transition-all duration-700 md:justify-between md:items-center',          navBackgrounded && 'bg-[rgb(15,25,34,.7)] backdrop-blur-sm')}>
                 <h2 
                     className='md:text-xl pt-1 md:pt-0 text-white font-black font-Roboto'><a href="#"
                     >Portfolio</a>
@@ -79,13 +80,13 @@ const Nav = () => {
                         <span className="w-[90%] h-[.5px] top-[100%] scale-0 transition-all group-hover:scale-100 bg-slate-50 absolute"></span>
                     </li>
                     <li className=" duration-800 flex flex-col items-center group relative">
-                        <a href="#" className='li transition-all font-thin font-Roboto px-2 pt-1 rounded-md text-white text-base'>
+                        <a href="#work" className='li transition-all font-thin font-Roboto px-2 pt-1 rounded-md text-white text-base'>
                         Work 
                         </a>
                         <span className="w-[90%] h-[.5px] transition-all top-[100%] scale-0 group-hover:scale-100 bg-slate-50 absolute"></span>
                     </li>
                     <li className=" duration-800 flex flex-col items-center group relative">
-                        <a href="#" className='li transition-all font-thin font-Roboto px-2 pt-1 rounded-md text-white text-base'>
+                        <a href="#contact" className='li transition-all font-thin font-Roboto px-2 pt-1 rounded-md text-white text-base'>
                         Contact 
                         </a>
                         <span className="w-[90%] h-[.5px] top-[100%] scale-0 transition-all group-hover:scale-100 bg-slate-50 absolute"></span>
