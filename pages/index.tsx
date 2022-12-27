@@ -9,6 +9,7 @@ import Work from "../components/Work";
 import Contact from "../components/Contact";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Footer from '../components/Footer'
 
 const Home: NextPage = () => {
   useEffect(()=>{
@@ -39,9 +40,9 @@ const Home: NextPage = () => {
       </Head>
       <main className="">
         <Nav/>
-        <section className='min-h-screen w-full bg-no-repeat sticky top-0 z-0 flex flex-col justify-center bg-[url("../public/futureGrid.webp")] bg-[rgb(105,25,255)] bg-[length:105%_109%]' id='home'>          
+        <section className='min-h-screen w-full bg-no-repeat sticky top-0 z-0 flex flex-col justify-center bg-[url("../public/futureGrid.webp")] bg-bg-dark bg-[length:105%_109%]' id='home'>          
           <div className='text-center p-6 px-2'> 
-            <h1 className='text-5xl text-white py-1 font-Roboto text-center md:text-7xl md:leading-tight font-bold lg:text-8xl lg:leading-tight'>Let us program <br/> and design <br/> our future </h1>
+            <h1 className='text-5xl text-white py-1 font-Roboto-Condensed text-center md:text-7xl md:leading-tight font-bold lg:text-8xl lg:leading-tight'>Let us program <br/> and design <br/> the future </h1>
             {/* <p className='text-md text-white leading-8 font-Roboto'>
               Freelancer providing services for programming and bringing frontend designs to life.
             </p> */}
@@ -65,6 +66,8 @@ const Home: NextPage = () => {
         <Work/>
 
         <Contact/>
+
+        <Footer/>
 
       </main>
 

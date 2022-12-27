@@ -48,14 +48,14 @@ const Me = () => {
 
   return (
     <>
-      <section className=" flex bg-[#0f1922] relative pb-10 md:pb-0 z-10 min-h-screen flex-col md:flex-row" id='about'>
+      <section className=" flex bg-bg-dark relative pb-10 md:pb-0 z-10 min-h-screen flex-col md:flex-row" id='about'>
             <div className="bg-[url(../public/bg3.jpg)] md:w-2/4 min-h-screen  bg-cover">
 
             </div>
             <div className="md:w-2/4 flex flex-col items-left justify-center px-20">
             {/* <!-- typerwiter headline--> */}
               <div className="relative py-16 w-fit md:py-0">
-                <h2 className='text-[rgb(105,25,255)] font-Roboto-Condensed font-bold uppercase text-xl mb-6'>About</h2>
+                <h2 className='text-main font-Roboto-Condensed font-bold uppercase text-xl mb-6'>About</h2>
                 <h3
                   id="typewriter"
                   className=" font-bold text-white  text-3xl lg:text-5xl md:mb-8 font-Roboto-Mono  overflow-hidden whitespace-nowrap w-0"

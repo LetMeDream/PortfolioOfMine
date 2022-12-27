@@ -11,9 +11,11 @@ module.exports = {
       'Roboto-Mono': ['Roboto Mono', 'monospace'],
       'Roboto-Condensed': ['Roboto Condensed', 'sans-serif']
     },
-    
     extend: {
-      
+      colors:{
+        "bg-dark": "var(--bg-dark-color)",
+        "main": "var(--brand-color)"
+      }
     },
   },
   plugins: [],

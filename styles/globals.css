@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Dark bg */
+:root{
+  --brand-color: rgb(105,25,255);
+  --bg-dark-color: #0f1922;
+}
+
 *{
     scroll-behavior: smooth;
 }
