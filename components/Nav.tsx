@@ -1,5 +1,5 @@
 import {useState,useEffect,useRef} from 'react';
-import { BiMoon } from 'react-icons/bi';
+import {BsLinkedin,BsGithub} from 'react-icons/bs';
 import {useWindowSize} from '../hooks/useWindowSize'
 
 
@@ -74,26 +74,31 @@ const Nav = () => {
                 >
                 
                     <li className=" duration-800 flex flex-col items-center group relative">
-                        <a href="#about" className='li transition-all font-thin font-Roboto pl-0 md:pl-2 px-2 pt-1 rounded-md text-white text-base'>
+                        <a href="#about" className='li transition-all font-thin  font-Roboto-Mono uppercase pl-0 md:pl-2 px-2 pt-1 rounded-md text-white text-xs'>
                         About 
                         </a>
                         <span className="w-[90%] h-[.5px] top-[100%] scale-0 transition-all group-hover:scale-100 bg-slate-50 absolute"></span>
                     </li>
                     <li className=" duration-800 flex flex-col items-center group relative">
-                        <a href="#work" className='li transition-all font-thin font-Roboto px-2 pt-1 rounded-md text-white text-base'>
+                        <a href="#work" className='li transition-all font-thin  font-Roboto-Mono uppercase px-2 pt-1 rounded-md text-white text-xs'>
                         Work 
                         </a>
                         <span className="w-[90%] h-[.5px] transition-all top-[100%] scale-0 group-hover:scale-100 bg-slate-50 absolute"></span>
                     </li>
                     <li className=" duration-800 flex flex-col items-center group relative">
-                        <a href="#contact" className='li transition-all font-thin font-Roboto px-2 pt-1 rounded-md text-white text-base'>
+                        <a href="#contact" className='li transition-all font-thin  font-Roboto-Mono uppercase px-2 pt-1 rounded-md text-white text-xs'>
                         Contact 
                         </a>
                         <span className="w-[90%] h-[.5px] top-[100%] scale-0 transition-all group-hover:scale-100 bg-slate-50 absolute"></span>
                     </li>
-                    <li>
-                        <BiMoon className='cursor-pointer text-white text-2xl ml-4 hover:scale-105 transition-all'/>
-                    </li>
+                    <div className='ml-8 flex justify-center gap-4 text-2xl text-white'>
+                        <a href="https://github.com/LetMeDream" target='_blank'>
+                            <BsGithub className='hover:scale-110 duration-500 transition-all'/>
+                        </a>
+                        <a href="https://www.linkedin.com/in/raulalfonzorondon/" target='_blank'>
+                            <BsLinkedin className='hover:scale-110 duration-500 transition-all'/>
+                        </a>
+                    </div>
                 </ul>
                 {/* Responsive nav toggle button */}
                 <div className="button md:hidden absolute right-16 flex flex-col items-end gap-1 cursor-pointer py-2"

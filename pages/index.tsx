@@ -7,9 +7,15 @@ import Me from "../components/Me";
 import Nav from "../components/Nav";
 import Work from "../components/Work";
 import Contact from "../components/Contact";
+import Footer from '../components/Footer'
+/* React-toastify */
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import Footer from '../components/Footer'
+/* React-splide */
+// Default theme
+import '@splidejs/react-splide/css';
+import { Splide, SplideSlide } from '@splidejs/react-splide';
+
 
 const Home: NextPage = () => {
   useEffect(()=>{

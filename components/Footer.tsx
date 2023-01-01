@@ -30,10 +30,10 @@ const Footer = () => {
                 </div>
                 {/* <hr className='border-stone-600 backdrop-blur-sm' /> */}
                 <div className='py-10 flex justify-center gap-10 text-2xl'>
-                  <a href="#">
+                  <a href="https://github.com/LetMeDream" target='_blank'>
                     <BsGithub className='hover:scale-110 duration-500 transition-all'/>
                   </a>
-                  <a href="#">
+                  <a href="https://www.linkedin.com/in/raulalfonzorondon/" target='_blank'>
                     <BsLinkedin className='hover:scale-110 duration-500 transition-all'/>
                   </a>
                 </div>

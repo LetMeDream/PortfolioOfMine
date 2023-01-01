@@ -29,6 +29,7 @@ const Me = () => {
           let textLength = typewriterHeadlines[index].length;
           let speed = textLength / 2.4;
 
+          typewriter.style.width = '0px';
           typewriter.style.animation =
             "typing " + speed + "s steps(" + textLength + ", end)";
           if(index === typewriterHeadlines.length - 1){
@@ -58,7 +59,7 @@ const Me = () => {
                 <h2 className='text-main font-Roboto-Condensed font-bold uppercase text-xl mb-6'>About</h2>
                 <h3
                   id="typewriter"
-                  className=" font-bold text-white  text-3xl lg:text-5xl md:mb-8 font-Roboto-Mono  overflow-hidden whitespace-nowrap w-0"
+                  className=" font-bold text-white  text-3xl lg:text-5xl md:mb-8 font-Roboto-Mono  overflow-hidden whitespace-nowrap "
                 >
                   Error (╯°□°)╯︵ ┻━┻
                 </h3>
