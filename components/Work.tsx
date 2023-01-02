@@ -32,7 +32,7 @@ const Work = () => {
         >
           <SplideTrack>
             {/* Delicious */}
-            <SplideSlide className='bg-bg-dark min-h-screen min-w-screen group bg-[url(../public/images/deliciousCollage.png)] transition-all   duration-500 bg-[size:100%] hover:bg-[size:105%] bg-center'>
+            <SplideSlide className='bg-bg-dark min-h-screen min-w-screen group ease-in-out bg-[url(../public/images/deliciousCollage.png)] transition-all   duration-500 bg-[size:100%] hover:bg-[size:105%] bg-center'>
               <a href="https://letmedream.github.io/delicious " className='flex items-center justify-center min-h-screen' target='_blank'>
 
                 <div className="absolute right-0 w-full h-full bg-gradient-to-t from-neutral-900">
@@ -40,12 +40,12 @@ const Work = () => {
 
                 <div className="w-10/12"> 
                 
-                  <h2 className='text-white text-6xl transition-transform duration-500 z-20 relative group-hover:-translate-y-full font-Roboto-Mono'>
+                  <h2 className='text-white text-6xl transition-transform duration-500 top-6 z-20 relative group-hover:-translate-y-full font-Roboto-Mono'>
                     Delicious
                   </h2>
 
                   <div className='overflow-hidden'>
-                    <h3 style={{ textShadow: '1px 1px gray' }} className='transition-transform   -translate-y-full group-hover:-translate-y-0 duration-500 max-w-prose text-white font-Roboto'>
+                    <h3 style={{ textShadow: '1px 1px gray' }} className='transition-transform ease-in  translate-y-full group-hover:translate-y-0 duration-500 max-w-prose text-white font-Roboto'>
                       Delicious is a web mockup for a api-consuming application. It connects to spoonacular' API and allows us to explore an endless variety of dishes along with their ingredients and  step by step instructions. 
                     </h3>
                   </div>
@@ -56,7 +56,7 @@ const Work = () => {
               </a>
             </SplideSlide>
             {/* Trivia */}
-            <SplideSlide className='bg-bg-dark min-h-screen min-w-screen group bg-[url(../public/images/triviaCollage.png)] transition-all duration-500 bg-[size:100%] hover:bg-[size:105%] bg-center'>
+            <SplideSlide className='bg-bg-dark min-h-screen min-w-screen group ease-in-out bg-[url(../public/images/triviaCollage.png)] transition-all duration-500 bg-[size:100%] hover:bg-[size:105%] bg-center'>
               <a href="https://letmedream.github.io/trivia/ " className='flex items-center justify-center min-h-screen' target='_blank'>
 
                 <div className="absolute right-0 w-full h-full bg-gradient-to-t from-neutral-900">
@@ -64,12 +64,12 @@ const Work = () => {
 
                 <div className="w-10/12"> 
                 
-                  <h2 className='text-white text-6xl transition-transform duration-500 z-20 relative group-hover:-translate-y-full font-Roboto-Mono'>
+                  <h2 className='text-white text-6xl transition-transform duration-500 bottom-1 z-20 relative group-hover:-translate-y-full font-Roboto-Mono'>
                     Trivia
                   </h2>
 
                   <div className='overflow-hidden'>
-                    <h3 style={{ textShadow: '1px 1px gray' }}  className='transition-transform -translate-y-full group-hover:-translate-y-0 duration-500 max-w-prose text-white font-Roboto'>
+                    <h3 style={{ textShadow: '1px 1px gray' }}  className='transition-transform ease-in -translate-y-full group-hover:-translate-y-0 duration-500 max-w-prose text-white font-Roboto'>
                       Just a trivia game created in ReactJs
                     </h3>
                   </div>
@@ -80,7 +80,7 @@ const Work = () => {
               </a>
             </SplideSlide>
             {/* SSN */}
-            <SplideSlide className='bg-bg-dark min-h-screen min-w-screen group bg-[url(../public/images/ssnCollage.png)] transition-all duration-500 bg-[size:100%] hover:bg-[size:105%] bg-center'>
+            <SplideSlide className='bg-bg-dark min-h-screen min-w-screen group ease-in-out bg-[url(../public/images/ssnCollage.png)] transition-all duration-500 bg-[size:100%] hover:bg-[size:105%] bg-center'>
               <a href="https://ssn.com.ve" className='flex items-center justify-center min-h-screen' target='_blank'>
 
                 <div className="absolute right-0 w-full h-full bg-gradient-to-t from-neutral-900">
@@ -88,12 +88,12 @@ const Work = () => {
 
                 <div className="w-10/12"> 
                 
-                  <h2 className='text-white text-6xl transition-transform duration-500 z-20 relative group-hover:-translate-y-full font-Roboto-Mono'>
+                  <h2 className='text-white text-6xl transition-transform duration-500 top-2 z-20 relative group-hover:-translate-y-full font-Roboto-Mono'>
                     SSN
                   </h2>
 
                   <div className='overflow-hidden'>
-                    <h3 style={{ textShadow: '1px 1px gray' }}  className='transition-transform -translate-y-full group-hover:-translate-y-0 duration-500 max-w-prose text-white font-Roboto'>
+                    <h3 style={{ textShadow: '1px 1px gray' }}  className='transition-transform ease-in -translate-y-full group-hover:-translate-y-0 duration-500 max-w-prose text-white font-Roboto'>
                       Website for SSN, a brand with a vision to help customers with network installations, technical support, hosting services, equiptment repair and more.
                     </h3>
                   </div>
@@ -104,7 +104,7 @@ const Work = () => {
               </a>
             </SplideSlide>
             {/* letMeChat */}
-            <SplideSlide className='bg-bg-dark min-h-screen min-w-screen group bg-[url(../public/images/letMeChat.png)] transition-all duration-500 bg-[size:100%] hover:bg-[size:105%] bg-center'>
+            <SplideSlide className='bg-bg-dark min-h-screen min-w-screen group ease-in-out bg-[url(../public/images/letMeChat.png)] transition-all duration-500 bg-[size:100%_100%] hover:bg-[size:105%_105%] bg-center'>
               <a href="https://letmedream.github.io/letMeChat/ " className='flex items-center justify-center min-h-screen' target='_blank'>
 
                 <div className="absolute right-0 w-full h-full bg-gradient-to-t from-neutral-900">
@@ -112,12 +112,12 @@ const Work = () => {
 
                 <div className="w-10/12"> 
                 
-                  <h2 className='text-white text-6xl transition-transform duration-500 z-20 relative group-hover:-translate-y-full font-Roboto-Mono'>
+                  <h2 className='text-white text-6xl transition-transform top-1 duration-500 z-20 relative group-hover:-translate-y-full font-Roboto-Mono'>
                     letMeChat
                   </h2>
 
                   <div className='overflow-hidden'>
-                    <h3 style={{ textShadow: '1px 1px gray' }}  className='transition-transform -translate-y-full group-hover:-translate-y-0 duration-500 max-w-prose text-white font-Roboto'>
+                    <h3 style={{ textShadow: '1px 1px gray' }}  className='transition-transform ease-in -translate-y-full group-hover:-translate-y-0 duration-500 max-w-prose text-white font-Roboto'>
                       letMeChat is a simple web mockup for a chat application. It was created using ReactJs, using Tailwind for styling and Firebase   for authentication and storage
                     </h3>
                   </div>
@@ -129,9 +129,6 @@ const Work = () => {
             </SplideSlide>
 
             
-
-            <SplideSlide className='bg-bg-dark min-h-screen min-w-screen flex items-center justify-center'>  
-            </SplideSlide>
 
           </SplideTrack>
 
