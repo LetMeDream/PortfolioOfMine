@@ -104,7 +104,7 @@ const Work = () => {
               </a>
             </SplideSlide>
             {/* letMeChat */}
-            <SplideSlide className='bg-bg-dark min-h-screen min-w-screen group ease-in-out bg-[url(../public/images/letMeChat.png)] transition-all duration-500 bg-[size:100%_100%] hover:bg-[size:105%_105%] bg-center'>
+            <SplideSlide className='bg-bg-dark min-h-screen min-w-screen group ease-in-out bg-[url(../public/images/letMeChatCollage.png)] transition-all duration-500 bg-[size:100%_100%] hover:bg-[size:105%_105%] bg-center'>
               <a href="https://letmedream.github.io/letMeChat/ " className='flex items-center justify-center min-h-screen' target='_blank'>
 
                 <div className="absolute right-0 w-full h-full bg-gradient-to-t from-neutral-900">
